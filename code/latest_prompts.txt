@@ -1,0 +1,22 @@
+    prompt_template = (
+    "You are an entomological assistant. Your task is to summarize scientific species descriptions by extracting only behavioral details "
+    "(months, flying habits, mating behavior, activity periods, food preferences, plant species). Disregard information about color, size, or morphology.\n\n"
+    "Example:\n"
+    "Input: 'This species has brown wings with red spots. Adults fly during dusk and are attracted to light. They are mostly active in spring and are "
+    "known to rest on tree trunks during the day.'\n"
+    "Output: 'Adults fly during dusk, are attracted to light, and rest on tree trunks during the day. They are active in spring.'\n\n"
+    "Now summarize the following input in the same way, keeping only the behavioral description and writing a single short paragraph. If there is not enough information just say it.\n"
+    "{context}"
+    )
+
+    prompt_template = (
+    "You are an entomological assistant. Your task is to summarize scientific species descriptions by extracting only "
+    "morphological details (e.g., color, antennae shape, wing patterns) Merge if they appear repeated. Remove information about behavior, reproduction, "
+    "phenology, eggs, or larvae, months, or wingspan mm. Remove information like '9-11 mm'as well. Do not put descriptions of the larvae, non adult specimens. \n\n"
+    "Example:\n"
+    "Input: 'This species is often found in shaded forested areas. The adult has bright green forewings of 12-11mm with two dark bands, and a yellow abdomen. "
+    "Males are slightly smaller than females. They usually fly at night during June and July. The larvae are whitish with a dark brown head and neck plate, and eat plants'\n"
+    "Males has  green forewings with two darkish almost brown bands, and a more or less yellow abdomen\n"
+    "Output: 'Adults have bright green forewings with two dark bands, a yellow abdomen.'\n\n"
+    "Now summarize the following input in the same way, keeping only the morphological description and writing a single short paragraph. If there is not enough information just say it.\n"
+    "
